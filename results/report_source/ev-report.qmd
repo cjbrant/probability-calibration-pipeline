@@ -1,0 +1,115 @@
+---
+title: "Positive EV Sports Betting"
+subtitle: "NFL bookmaker odds, calibration, and value strategy (2020–2025)"
+format:
+  pptx:
+    reference-doc: "Positive EV Sportbetting.pptx"
+    slide-level: 1
+  html:
+    theme: default
+    css: styles.css
+    toc: false
+page-layout: article
+---
+
+# Why this report
+- De-vig NFL odds (2020–2025) to estimate true win probabilities.
+- Check calibration and bookmaker edge.
+- Test a simple +EV betting rule.
+- Data: The Odds API snapshots → flattened by bookmaker/market/outcome, deduped by game.
+- True prob proxy: median no-vig prices from sharp books; calibration via beta + BBQ models (Brier/log-loss/ECE).
+- Backtest: flat $100 stake on any +EV offer (stacked bets per game = aggressive upper bound).
+
+# Agenda
+- Data and tools used to turn odds into estimated truth.
+- How we calibrate and compute EV (math + models).
+- Backtest design and risk assumptions.
+- Key results (home/away, calibration, bookmaker EV, +EV strategy).
+- Practical takeaways and future work.
+
+# Data coverage & sources
+- Seasons: NFL regular seasons 2020–2025 (game JSONs in repo).
+- Source: The Odds API snapshots (home/away moneyline markets).
+- Books: sharp list to form priors; all available books scanned for EV.
+- Cleaning: group by game date/home/away → drop duplicate book rows.
+- Outcomes: historical results joined to snapshots for training/testing.
+
+# Workflow at a glance
+- Odds JSON → implied probs (decimal/american) → remove vig per market.
+- Compute sharp-book median as `p_prior` (consensus true prob proxy).
+- Build training set by joining priors to labeled results.
+- Fit calibrators (beta, BBQ) and evaluate Brier, log-loss, ECE.
+- Score snapshots with calibrated probs → compute EV per book/outcome.
+- Scan for +EV bets and backtest cumulative profit and per-book ROI.
+
+# From odds to true probabilities
+- Implied probability (decimal odds): `p_implied = 1 / odds`.
+- No-vig step on two-way markets: scale implied probs so they sum to 1.
+- True-prob proxy: median no-vig `p` across sharp books (consensus).
+- Calibrated probability = model-adjusted `p` to reduce bias at extremes.
+- These calibrated `p` values feed EV calculations and backtests.
+
+# Calibration models
+- **Beta calibrator**: parametric, smooths probabilities toward observed frequencies.
+- **BBQ (Bayesian binning into quantiles)**: nonparametric; averages over binnings to capture local bias.
+- Metrics tracked: Brier, log-loss, expected calibration error, sample size.
+- Goal: reduce under/overconfidence so EV math reflects realistic win rates.
+
+# Expected value & line shopping
+- EV per outcome: `(decimal_odds * p_win) - 1`.
+- Positive EV if bettor’s estimated `p_win` beats the book’s implied chance.
+- Line shopping matters: pick the book with highest EV for the same game.
+- In backtest we allow multiple +EV books per game → aggressive but upper bound.
+
+# Backtest setup
+- Rule: whenever any book shows +EV, bet $100 on that side.
+- Time span: 2020–2025 snapshots; both home and away sides considered.
+- Exposure: multiple books can trigger per game (stacking risk).
+- Metrics: win rate, total profit, ROI curve, per-book EV summary.
+- Purpose: stress-test whether calibrated +EV signals pay off at scale.
+
+# Figure 1 - Home vs Away
+- Home win rate: 53.9% vs de-vig true prob 54.9%.
+- Away win rate: 46.1% vs de-vig true prob 45.1%.
+- Market (after vig removed) tracks reality closely.
+- Games grouped by date/home/away to avoid sportsbook duplication.
+
+![Home vs Away: Actual vs True Probability](fig1_home_vs_away%20(1).png){fig-align="center" width="90%"}
+
+# Figure 2 - Odds Calibration
+- Mid-range (50%–70%) is well aligned with actual win rates.
+- Underdogs: odds overestimate their chances (overpriced).
+- Heavy favorites: odds slightly underestimate them (underpriced).
+- Probability bins compare implied vs actual; dashed line = perfect calibration.
+- Bias at extremes suggests value may appear on big favorites and against long-shot home teams.
+
+![Calibration of Sportsbook Odds](fig2_odds_calibration.png){fig-align="center" width="90%"}
+
+# Figure 3 - Bookmaker EV
+- All books show negative average EV (house edge persists).
+- Some books are less negative (closer to zero).
+- Line shopping matters: pick the least-bad price per game.
+- Average home/away EV combined per book; bars left of 0 are bad for bettors.
+
+![Average EV by Bookmaker](fig3_bookmaker_ev.png){fig-align="center" width="90%"}
+
+# Figure 4 - +EV Betting Strategy
+- Rule: bet $100 whenever any book offers +EV on a game (may place multiple bets per game).
+- 2,913 bets | 44.6% win rate | $21,216 profit.
+- Profitable despite <50% win rate because wins happen at better odds.
+- Stacking per book makes this an upper-bound, high-exposure result; one-bet-per-game would be lower.
+- Cumulative curve shows volatile path but positive trend.
+
+![Cumulative Profit for +EV Bets](fig4_ev_strategy_profit.png){fig-align="center" width="90%"}
+
+# Limitations & next steps
+- Strategy risk: stacked bets per game inflate exposure; cap to one book/game or size via Kelly/fixed limits.
+- Market scope: only NFL sides; extend to totals/props/other sports and test live-odds latency/slippage.
+- Modeling: explore richer priors, more calibration diagnostics, and sensitivity to hold assumptions.
+- Data freshness: snapshots are point-in-time; real-time odds drift could erode observed edge.
+
+# Takeaways
+- De-vigged odds mirror outcomes; reliable starting point for EV.
+- Probability extremes show bias: underdogs overpriced, heavy favorites underpriced.
+- No book is +EV overall; line shopping trims the house edge.
+- +EV strategy backtest is promising but aggressive; constrain exposure for realistic deployment.

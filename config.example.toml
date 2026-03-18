@@ -1,0 +1,11 @@
+[api]
+the_odds_api_key = "YOUR_THE_ODDS_API_KEY"
+
+[fetch]
+sport = "americanfootball_nfl"
+region = "us"
+markets = "h2h"
+odds_format = "american"
+
+[sharp]
+books = ["pinnacle","betonlineag"]

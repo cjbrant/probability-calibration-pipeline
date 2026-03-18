@@ -1,0 +1,31 @@
+event_id,outcome,home_team,away_team,commence_time,market,p_prior
+365a766a3862bc47a5455dc3b097421e,Buffalo Bills,Pittsburgh Steelers,Buffalo Bills,2025-11-30T21:25:00Z,h2h,0.6547884187082406
+365a766a3862bc47a5455dc3b097421e,Pittsburgh Steelers,Pittsburgh Steelers,Buffalo Bills,2025-11-30T21:25:00Z,h2h,0.3452115812917595
+36fcf5ca155a5dcd2f7a87fd2a985b02,Cleveland Browns,Cleveland Browns,San Francisco 49ers,2025-11-30T18:00:00Z,h2h,0.28523367220068746
+36fcf5ca155a5dcd2f7a87fd2a985b02,San Francisco 49ers,Cleveland Browns,San Francisco 49ers,2025-11-30T18:00:00Z,h2h,0.7147663277993125
+3e65786eddd4c7aee9e7f2504f6fdedc,New England Patriots,New England Patriots,New York Giants,2025-12-02T01:15:00Z,h2h,0.765438008616563
+3e65786eddd4c7aee9e7f2504f6fdedc,New York Giants,New England Patriots,New York Giants,2025-12-02T01:15:00Z,h2h,0.23456199138343709
+52f539d9d080618aa8830a0b03846a80,Chicago Bears,Philadelphia Eagles,Chicago Bears,2025-11-28T20:00:00Z,h2h,0.2787456445993032
+52f539d9d080618aa8830a0b03846a80,Philadelphia Eagles,Philadelphia Eagles,Chicago Bears,2025-11-28T20:00:00Z,h2h,0.7212543554006969
+61e1e459b2ddafd43e8808d4f40c01d9,Jacksonville Jaguars,Tennessee Titans,Jacksonville Jaguars,2025-11-30T18:00:00Z,h2h,0.7402209614810392
+61e1e459b2ddafd43e8808d4f40c01d9,Tennessee Titans,Tennessee Titans,Jacksonville Jaguars,2025-11-30T18:00:00Z,h2h,0.25977903851896084
+6f956074c4df48e7b07a3286a6c6ed2a,Minnesota Vikings,Seattle Seahawks,Minnesota Vikings,2025-11-30T21:05:00Z,h2h,0.2085909955143707
+6f956074c4df48e7b07a3286a6c6ed2a,Seattle Seahawks,Seattle Seahawks,Minnesota Vikings,2025-11-30T21:05:00Z,h2h,0.7914090044856295
+76ac5a8d2c8679ae6ea8861114791bd8,Las Vegas Raiders,Los Angeles Chargers,Las Vegas Raiders,2025-11-30T21:25:00Z,h2h,0.1990049751243781
+76ac5a8d2c8679ae6ea8861114791bd8,Los Angeles Chargers,Los Angeles Chargers,Las Vegas Raiders,2025-11-30T21:25:00Z,h2h,0.8009950248756219
+883a79a306b312fad75ebf04b441b4da,Baltimore Ravens,Baltimore Ravens,Cincinnati Bengals,2025-11-28T01:20:00Z,h2h,0.7502401536983669
+883a79a306b312fad75ebf04b441b4da,Cincinnati Bengals,Baltimore Ravens,Cincinnati Bengals,2025-11-28T01:20:00Z,h2h,0.24975984630163303
+90391be251d876bb41d36978a43c7ac2,Carolina Panthers,San Francisco 49ers,Carolina Panthers,2025-11-25T01:15:00Z,h2h,0.23456199138343709
+90391be251d876bb41d36978a43c7ac2,San Francisco 49ers,San Francisco 49ers,Carolina Panthers,2025-11-25T01:15:00Z,h2h,0.765438008616563
+9c040de8f1dfc3ddee20e0d65c9402de,Denver Broncos,Washington Commanders,Denver Broncos,2025-12-01T01:20:00Z,h2h,0.7212543554006969
+9c040de8f1dfc3ddee20e0d65c9402de,Washington Commanders,Washington Commanders,Denver Broncos,2025-12-01T01:20:00Z,h2h,0.2787456445993032
+9da608f5bdae527b280abd61e47a110b,Atlanta Falcons,New York Jets,Atlanta Falcons,2025-11-30T18:00:00Z,h2h,0.5711159737417943
+9da608f5bdae527b280abd61e47a110b,New York Jets,New York Jets,Atlanta Falcons,2025-11-30T18:00:00Z,h2h,0.42888402625820565
+de53b8a594fe830c5fd56484705cd756,Dallas Cowboys,Dallas Cowboys,Kansas City Chiefs,2025-11-27T21:30:00Z,h2h,0.37705359547535683
+de53b8a594fe830c5fd56484705cd756,Kansas City Chiefs,Dallas Cowboys,Kansas City Chiefs,2025-11-27T21:30:00Z,h2h,0.6229464045246431
+e3c9bfba57bbe784481d881ea3b4519d,Miami Dolphins,Miami Dolphins,New Orleans Saints,2025-11-30T18:00:00Z,h2h,0.7014684524770051
+e3c9bfba57bbe784481d881ea3b4519d,New Orleans Saints,Miami Dolphins,New Orleans Saints,2025-11-30T18:00:00Z,h2h,0.298531547522995
+fa46c661007f5f0cbbf6abf939ac9d51,Houston Texans,Indianapolis Colts,Houston Texans,2025-11-30T18:00:00Z,h2h,0.36546943919344677
+fa46c661007f5f0cbbf6abf939ac9d51,Indianapolis Colts,Indianapolis Colts,Houston Texans,2025-11-30T18:00:00Z,h2h,0.6345305608065532
+fe2eb07797580740af78037ab498198e,Detroit Lions,Detroit Lions,Green Bay Packers,2025-11-27T18:00:00Z,h2h,0.5930856097407103
+fe2eb07797580740af78037ab498198e,Green Bay Packers,Detroit Lions,Green Bay Packers,2025-11-27T18:00:00Z,h2h,0.4069143902592896

@@ -1,0 +1,139 @@
+:root {
+  --dk: #0E2841;
+  --lt: #E8E8E8;
+  --accent-1: #156082;
+  --accent-2: #E97132;
+  --accent-3: #196B24;
+  --accent-4: #0F9ED5;
+  --accent-5: #A02B93;
+  --accent-6: #4EA72E;
+  --text-muted: #467886;
+  --body-font: "Aptos", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  --display-font: "Aptos Display", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--dk);
+  background:
+    radial-gradient(circle at 20% 20%, rgba(232, 232, 232, 0.5), transparent 35%),
+    radial-gradient(circle at 80% 10%, rgba(232, 232, 232, 0.6), transparent 30%),
+    var(--lt);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--display-font);
+  color: var(--accent-1);
+  letter-spacing: 0.02em;
+}
+
+a {
+  color: var(--accent-4);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.navbar {
+  background: var(--dk);
+}
+
+.hero {
+  background: linear-gradient(120deg, var(--dk), var(--accent-1) 60%, var(--accent-4));
+  color: #fff;
+  padding: 1.8rem;
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 18px 36px rgba(14, 40, 65, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hero h2,
+.hero h3 {
+  color: #fff;
+  margin-top: 0;
+}
+
+.hero p {
+  margin: 0.25rem 0 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.section-card {
+  background: #fff;
+  border-left: 6px solid var(--accent-2);
+  padding: 1.2rem 1.4rem;
+  border-radius: 14px;
+  box-shadow: 0 14px 40px rgba(14, 40, 65, 0.12);
+  margin: 1.25rem 0;
+}
+
+.section-card h3 {
+  margin-top: 0;
+  color: var(--accent-1);
+}
+
+.section-card strong {
+  color: var(--accent-1);
+}
+
+.section-card .subtle {
+  color: var(--text-muted);
+  font-size: 0.96rem;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+  margin: 0.8rem 0 0.3rem;
+}
+
+.metric {
+  background: linear-gradient(135deg, var(--accent-1), var(--dk));
+  color: #fff;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(14, 40, 65, 0.18);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.metric strong {
+  display: block;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.key-points {
+  margin-top: 0.6rem;
+}
+
+.key-points ul {
+  padding-left: 1.2rem;
+}
+
+figure img {
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(14, 40, 65, 0.2);
+  border: 1px solid #e5e5e5;
+}
+
+.takeaways {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.2rem 1.4rem;
+  box-shadow: 0 14px 40px rgba(14, 40, 65, 0.12);
+  border: 1px solid rgba(14, 40, 65, 0.06);
+}
+
+.takeaways h3 {
+  margin-top: 0;
+}

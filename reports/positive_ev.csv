@@ -1,0 +1,17 @@
+match,start,book,outcome,odds_american,odds_decimal,p_use,ev,event_id
+Atlanta Falcons @ New York Jets,2025-11-30T18:00:00Z,betonlineag,Atlanta Falcons,-145.0,1.6896551724137931,0.8677,0.4662,9da608f5bdae527b280abd61e47a110b
+Green Bay Packers @ Detroit Lions,2025-11-27T18:00:00Z,betonlineag,Detroit Lions,-150.0,1.6666666666666665,0.8677,0.4462,fe2eb07797580740af78037ab498198e
+Arizona Cardinals @ Tampa Bay Buccaneers,2025-11-30T18:00:00Z,betonlineag,Tampa Bay Buccaneers,-160.0,1.625,0.8677,0.4101,c0d324e29ce58b36bdc77564f7aae56f
+Kansas City Chiefs @ Dallas Cowboys,2025-11-27T21:30:00Z,betonlineag,Kansas City Chiefs,-175.0,1.5714285714285714,0.8532,0.3407,de53b8a594fe830c5fd56484705cd756
+Buffalo Bills @ Pittsburgh Steelers,2025-11-30T21:25:00Z,betonlineag,Buffalo Bills,-200.0,1.5,0.8532,0.2798,365a766a3862bc47a5455dc3b097421e
+Houston Texans @ Indianapolis Colts,2025-11-30T18:00:00Z,betonlineag,Indianapolis Colts,-225.0,1.4444444444444444,0.8596,0.2417,fa46c661007f5f0cbbf6abf939ac9d51
+San Francisco 49ers @ Cleveland Browns,2025-11-30T18:00:00Z,betonlineag,San Francisco 49ers,-240.0,1.4166666666666667,0.8596,0.2178,36fcf5ca155a5dcd2f7a87fd2a985b02
+New Orleans Saints @ Miami Dolphins,2025-11-30T18:00:00Z,betonlineag,Miami Dolphins,-275.0,1.3636363636363638,0.8677,0.1833,e3c9bfba57bbe784481d881ea3b4519d
+Denver Broncos @ Washington Commanders,2025-12-01T01:20:00Z,betonlineag,Denver Broncos,-305.0,1.3278688524590163,0.8677,0.1522,9c040de8f1dfc3ddee20e0d65c9402de
+Jacksonville Jaguars @ Tennessee Titans,2025-11-30T18:00:00Z,betonlineag,Jacksonville Jaguars,-310.0,1.3225806451612903,0.8677,0.1476,61e1e459b2ddafd43e8808d4f40c01d9
+Cincinnati Bengals @ Baltimore Ravens,2025-11-28T01:20:00Z,betonlineag,Baltimore Ravens,-310.0,1.3225806451612903,0.8677,0.1476,883a79a306b312fad75ebf04b441b4da
+Chicago Bears @ Philadelphia Eagles,2025-11-28T20:00:00Z,betonlineag,Philadelphia Eagles,-312.0,1.3205128205128205,0.8677,0.1459,52f539d9d080618aa8830a0b03846a80
+San Francisco 49ers @ Cleveland Browns,2025-11-30T18:00:00Z,betonlineag,Cleveland Browns,200.0,3.0,0.366,0.0981,36fcf5ca155a5dcd2f7a87fd2a985b02
+New York Giants @ New England Patriots,2025-12-02T01:15:00Z,betonlineag,New England Patriots,-380.0,1.263157894736842,0.8677,0.0961,3e65786eddd4c7aee9e7f2504f6fdedc
+Houston Texans @ Indianapolis Colts,2025-11-30T18:00:00Z,betonlineag,Houston Texans,189.0,2.8899999999999997,0.366,0.0578,fa46c661007f5f0cbbf6abf939ac9d51
+Las Vegas Raiders @ Los Angeles Chargers,2025-11-30T21:25:00Z,betonlineag,Los Angeles Chargers,-510.0,1.196078431372549,0.8532,0.0205,76ac5a8d2c8679ae6ea8861114791bd8
