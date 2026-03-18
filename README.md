@@ -40,10 +40,10 @@ pip install -r requirements.txt
 pip install -e .
 
 # Fit calibration models on training data
-python -m evbets fit-calibrator
+python -m evbets fit-calibrator --data data/training/demo_training.parquet --method bbq --model models/bbq.joblib
 
 # Scan a snapshot for +EV bets
-python -m evbets scan --snapshot data/snapshots/americanfootball_nfl_20251126_031409.json
+python -m evbets scan --in data/snapshots/americanfootball_nfl_20251126_031409.json --market h2h --odds-format american --sharp-books pinnacle --sharp-books betonlineag --target-books pinnacle --target-books betonlineag --no-log
 
 # Run the full backtest
 python -m evbets backtest
