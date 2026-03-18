@@ -4,9 +4,9 @@ Finding positive expected value bets by calibrating sportsbook odds against shar
 
 ## What this is
 
-My friend James loves sports betting and was curious about exploiting price differences between sportsbooks. The core question: can you systematically find bets where the implied probability from a sportsbook is wrong enough to bet against?
+This project was started with a friend who was curious about exploiting price differences between sportsbooks. The core question: can you systematically find bets where the implied probability from a sportsbook is wrong enough to bet against?
 
-In sports betting, "sharp" books (like Pinnacle) set accurate lines, and the rest of the market adjusts to follow — but with a lag. This project looks for that lag: cases where a recreational book's price implies a different probability than the sharp consensus, creating a positive expected value opportunity.
+In sports betting, "sharp" books (like Pinnacle) set accurate lines, and the rest of the market adjusts to follow... but with a lag. This project looks for that lag: cases where a recreational book's price implies a different probability than the sharp consensus, creating a positive expected value opportunity.
 
 ## What it does
 
@@ -15,7 +15,7 @@ The pipeline:
 1. Pulls odds from multiple sportsbooks via The Odds API
 2. Strips the vig (bookmaker margin) to get implied probabilities
 3. Builds a consensus "true" probability from the sharp books
-4. Calibrates these probabilities using Beta calibration and BBQ (Bayesian Binning into Quantiles) — two methods for correcting systematic bias in probability estimates
+4. Calibrates these probabilities using Beta calibration and BBQ (Bayesian Binning into Quantiles) (two methods for correcting systematic bias in probability estimates)
 5. Scans for bets where a book's price implies a lower win probability than our calibrated estimate
 6. Backtests the strategy on 5 years of NFL moneyline data
 
@@ -29,7 +29,7 @@ The pipeline:
 
 ## The takeaway
 
-Probability calibration matters whenever you're making decisions based on estimated probabilities. Even in a highly efficient market like NFL betting, calibrating the extremes of the probability distribution reveals exploitable patterns. The methods here (Beta calibration, BBQ) apply anywhere you need well-calibrated probabilities — not just sports.
+Probability calibration matters whenever you're making decisions based on estimated probabilities. Even in a highly efficient market like NFL betting, calibrating the extremes of the probability distribution reveals exploitable patterns. The methods here (Beta calibration, BBQ) apply anywhere you need well-calibrated probabilities, not just sports.
 
 ## How to run
 
